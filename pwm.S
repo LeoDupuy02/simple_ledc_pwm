@@ -1,7 +1,7 @@
 .global init_pwm
 
 # Use CH3 + TIMER3
-# Timer @12500Hz
+# Timer @1250Hz
 
 init_pwm : 
 
@@ -111,7 +111,7 @@ init_pwm :
 	#or t1, t1, t5
     #sw t1, 0(a2)
 
-    # Register : GPIO_FUNC8_OUT_SEL_CFG_REG (n: 0-21) (0x0554+4*n) : valeur sur 46 (ledc_ls_sig_out1 ) + 9ème bit sur 0 (to enable peripheral output)
+    # Register : GPIO_FUNC8_OUT_SEL_CFG_REG (n: 0-21) (0x0554+4*n) : valeur sur 48 (ledc_ls_sig_out1 ) + 9ème bit sur 0 (to enable peripheral output)
 	li a2, 0x60004574
 	li t5, 0xfffff800
 	li t6, 0x00000030
